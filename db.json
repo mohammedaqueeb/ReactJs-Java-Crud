@@ -1,0 +1,82 @@
+{
+  "domain": [
+    {
+      "id": 1,
+      "Name": "Shared Business Application",
+      "Type": "Software",
+      "ProductGroup": "Remote Hosting",
+      "Description": "Software for Business use",
+      "DomainLevel": "Level 3",
+      "DomainChair": "Deepanshu Tiwari",
+      "DomainProxy": "Aqueeb Shaikh",
+      "DomainMembers": "0",
+      "SiteURL": "URL",
+      "CreatedAt": "2021-11-11"
+    },
+    {
+      "id": 2,
+      "Name": "Finance",
+      "Type": "Software",
+      "ProductGroup": "Reporting Products",
+      "Description": "Software for Finance use",
+      "DomainLevel": "Level 5",
+      "DomainChair": "Siddhaling Dapure",
+      "DomainProxy": "Aqueeb Shaikh",
+      "DomainMembers": "0",
+      "SiteURL": "",
+      "CreatedAt": "2021-11-11"
+    },
+    {
+      "id": 3,
+      "Name": "Middleware Products",
+      "Type": "Software",
+      "ProductGroup": "Middleware Products",
+      "Description": "Middleware Products",
+      "DomainLevel": "Level 3",
+      "DomainChair": "Siddhaling Dapure",
+      "DomainProxy": "Ashutosh Adarsh",
+      "DomainMembers": "0",
+      "SiteURL": "adsdas",
+      "CreatedAt": "2021-11-12"
+    },
+    {
+      "id": 4,
+      "Name": "Firewall",
+      "Type": "Software",
+      "ProductGroup": "Security Products",
+      "Description": "Firewall",
+      "DomainLevel": "Level 3",
+      "DomainChair": "Siddhaling Dapure",
+      "DomainProxy": "Ashutosh Adarsh",
+      "DomainMembers": "0",
+      "SiteURL": "Firewall",
+      "CreatedAt": "2021-11-12"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "DomainId": 1,
+      "Status": "Publish",
+      "ProductName": "Mind Manager",
+      "Description": "lorem ipsum",
+      "Type": "Software",
+      "DomainName": "Firewall",
+      "Vendor": "Firewall",
+      "ClassificationReason": "",
+      "CreatedAt": "2021-11-12"
+    },
+    {
+      "id": 2,
+      "DomainId": 0,
+      "DomainName": "Middleware Products",
+      "ProductName": "sadasd",
+      "Type": "Software",
+      "Description": "dad",
+      "Vendor": "Level 1",
+      "ClassificationReason": "asdsd",
+      "Status": "",
+      "CreatedAt": ""
+    }
+  ]
+}

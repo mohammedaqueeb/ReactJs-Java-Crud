@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+body{
+  background-color: #e9e9e9!important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiToolbar-regular {
+  min-height: 50px;
+}
+.float-right{
+  float: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mb-3{
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table th{
+  font-size: 16px!important;
+    font-weight: 500!important;
+    border: 1px solid rgba(224, 224, 224, 1)!important;
 }
 
-.App-link {
-  color: #61dafb;
+table td{
+  border: 1px solid rgba(224, 224, 224, 1)!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input, 
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 10px!important;
+}
+.MuiInputLabel-asterisk{
+  color: red;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  line-height: 1.1em!important;
+}
+.mb-1{
+  margin-bottom: 5px!important;
+}
+.card{
+  background-color: #fff!important
+}
+
+.form-input{
+  font: inherit;
+  letter-spacing: inherit;
+  color: currentColor;
+  padding: 4px 0 5px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: content-box;
+  background: none;
+  height: 1.4375em;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  -webkit-animation-name: mui-auto-fill-cancel;
+  animation-name: mui-auto-fill-cancel;
+  -webkit-animation-duration: 10ms;
+  animation-duration: 10ms;
+  padding: 10px!important;
+  
+}
+
+.css-wjdba9-MuiInputBase-root-MuiInput-root:before {
+    border: 1px solid rgba(0, 0, 0, 0.42)!important;
+    padding: 4px!important;
+    border-radius: 5px!important;
+    line-height: 25px!important;
+}
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  padding: 4px 11px!important;
+  margin-top: 7px!important;
+  
+}
+
+.makeStyles-link-3:hover {
+  color: black!important;
+  border: none!important;
+  text-decoration: none!important;
 }
