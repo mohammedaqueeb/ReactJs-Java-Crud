@@ -50,6 +50,9 @@ function Navbar() {
             <Link to="/products" className={classes.link}>
               Product
             </Link>
+            <Link to="/product-version" className={classes.link}>
+              Product Version
+            </Link>
             
           </div>
       </Toolbar>

@@ -17,26 +17,26 @@ import EditIcon from '@mui/icons-material/Edit';
 
 
 
-export default function DomainList() {
+export default function ProductVersionList() {
 
-    const [domains, setDomain] = useState([]);
+    const [Versions, setVersion] = useState([]);
 
     let navigate = useNavigate();
 
     useEffect(() => {
-        DomainList();
+        VersionList();
     }, []);
 
-    const DomainList = async () =>{
-        const result = await axios.get("http://localhost:8081/api/domain/getAllDomain");
-        setDomain(result.data);
+    const VersionList = async () =>{
+        const result = await axios.get("http://localhost:8081/api/CtcVersion/list");
+        setVersion(result.data);
     }
 
     const deleteUser = async id => {
       var shouldDelete = window.confirm('Do you really want to delete this domain?');
       if (shouldDelete) {
-        await axios.delete(`http://localhost:8081/api/domain/deleteDomain/${id}`);
-        DomainList();
+        await axios.delete(`ht//localhost:8081/api/CtcVersion/delete?versionId=${id}`);
+        VersionList();
       } 
     };
 
@@ -44,30 +44,33 @@ export default function DomainList() {
     <Container maxWidth="lg">
     <Box m={2} pt={3}>
     
-    <h3 className="mb-3">Domain List <Button variant="contained" component={Link} to="/domain-manage" className="float-right">ADD DOMAIN</Button> </h3>
+    <h3 className="mb-3">Version List <Button variant="contained" component={Link} to="/product-version-manage" className="float-right">ADD PRODUCT VERSION</Button> </h3>
 
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="a dense  table">
         <TableHead>
           <TableRow>
-            <TableCell align="left">Domain Name </TableCell>
-            <TableCell align="left">Type</TableCell>
-            <TableCell align="left">Domain Chair</TableCell>
-            <TableCell align="left">Request</TableCell>
+            <TableCell align="left">Product Type </TableCell>
+            <TableCell align="left">Product Domain</TableCell>
+            <TableCell align="left">Vendor Name</TableCell>
+            <TableCell align="left">Product Name</TableCell>
+            <TableCell align="left">Platform</TableCell>
             <TableCell align="left">Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
             {
-                domains.map((domain, index) => (
+                Versions.map((version, index) => (
                     <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>   
-                        <TableCell align="left">{domain.domainName}</TableCell>
-                        <TableCell align="left">{domain.type}</TableCell>
-                        <TableCell align="left">{domain.domainChair}</TableCell>
-                        <TableCell align="left">{domain.request}</TableCell>
+                        <TableCell align="left">{version.productType}</TableCell>
+                        <TableCell align="left">{version.productDomain}</TableCell>
+                        <TableCell align="left">{version.vendorName}</TableCell>
+                        <TableCell align="left">{version.productName}</TableCell>
+                        <TableCell align="left">{version.platform}</TableCell>
+                        
                         <TableCell align="left">
-                            <IconButton component={Link} to={`/domain-manage/${domain.domainId}`}  aria-label="delete"><EditIcon /></IconButton>
-                            <IconButton onClick={() => deleteUser(domain.domainId)}  aria-label="delete"><DeleteIcon /></IconButton>
+                            <IconButton component={Link} to={`/domain-manage/${version.ctcVersionId}`}  aria-label="delete"><EditIcon /></IconButton>
+                            <IconButton onClick={() => deleteUser(version.ctcVersionId)}  aria-label="delete"><DeleteIcon /></IconButton>
                         </TableCell>
                     </TableRow>
                 ))

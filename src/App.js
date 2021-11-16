@@ -11,6 +11,8 @@ import Navbar from './common/Navbar';
 import DomainManageFormik from './Waste/DomainManageFormik';
 import ProductList from './component/ProductList';
 import ProductManage from './component/ProductManage';
+import ProductVersionList from './component/ProductVersionList';
+import ProductVersionManage from './component/ProductVersionManage';
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
               <Route exact="true"  path="/products" element={<ProductList />} />
               <Route exact="true"  path="/product-manage" element={<ProductManage />} />
               <Route exact="true"  path="/product-manage/:id" element={<ProductManage />} />
+
+              <Route exact="true"  path="/product-version" element={<ProductVersionList />} />
+              <Route exact="true"  path="/product-version-manage" element={<ProductVersionManage />} />
+              <Route exact="true"  path="/product-version-manage/:id" element={<ProductVersionManage />} />
               
               <Route path="*" element={<NotFound />} />
         </Routes>
