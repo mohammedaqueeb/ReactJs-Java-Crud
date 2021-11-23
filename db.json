@@ -61,9 +61,9 @@
       "ProductName": "Mind Manager",
       "Description": "lorem ipsum",
       "Type": "Software",
-      "DomainName": "Firewall",
-      "Vendor": "Firewall",
-      "ClassificationReason": "",
+      "DomainName": 1,
+      "Vendor": "Level 3",
+      "ClassificationReason": "NA",
       "CreatedAt": "2021-11-12"
     },
     {

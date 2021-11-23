@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(10),
     display: "flex",
   },
-  
- logo: {
+
+  logo: {
     flexGrow: "0",
     cursor: "pointer",
   },
@@ -40,21 +40,20 @@ function Navbar() {
         <Typography variant="h4" className={classes.logo}>
           CTC
         </Typography>
-          <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
-              Dashboard
-            </Link>
-            <Link to="/domains" className={classes.link}>
-              Domain
-            </Link>
-            <Link to="/products" className={classes.link}>
+        <div className={classes.navlinks}>
+          <Link to="/" className={classes.link}>
+            Dashboard
+          </Link>
+          <Link to="/domains" className={classes.link}>
+            Domain
+          </Link>
+          {/* <Link to="/products" className={classes.link}>
               Product
-            </Link>
-            <Link to="/product-version" className={classes.link}>
-              Product Version
-            </Link>
-            
-          </div>
+            </Link> */}
+          <Link to="/product-version" className={classes.link}>
+            Product Version
+          </Link>
+        </div>
       </Toolbar>
     </AppBar>
   );
