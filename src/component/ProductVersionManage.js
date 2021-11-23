@@ -41,7 +41,7 @@ export default function ProductVersionManage() {
 
   const FetchVersion = async () => {
     const result = await axios.get(
-      `http://localhost:8081/api/CtcVersion/getVersionInfoById?versionId=${id}`
+      `${process.env.REACT_APP_API_PATH}CtcVersion/getVersionInfoById?versionId=${id}`
     );
     setVersion(result.data);
   };
@@ -55,12 +55,12 @@ export default function ProductVersionManage() {
 
     if (id != undefined && id > 0) {
       await axios.put(
-        `http://localhost:8081/api/CtcVersion/update?versionId=${id}`,
+        `${process.env.REACT_APP_API_PATH}CtcVersion/update?versionId=${id}`,
         Version
       );
       navigate("/product-version");
     } else {
-      await axios.post("http://localhost:8081/api/CtcVersion", Version);
+      await axios.post(`${process.env.REACT_APP_API_PATH}CtcVersion`, Version);
       navigate("/product-version");
     }
 

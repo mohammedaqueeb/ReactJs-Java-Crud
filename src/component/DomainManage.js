@@ -37,7 +37,7 @@ export default function DomainManage() {
 
   const FetchDomain = async () => {
     const result = await axios.get(
-      `http://localhost:8081/api/domain/getDomainById/${id}`
+      `${process.env.REACT_APP_API_PATH}domain/getDomainById/${id}`
     );
     setDomain(result.data);
   };
@@ -51,12 +51,15 @@ export default function DomainManage() {
 
     if (id != undefined && id > 0) {
       await axios.put(
-        `http://localhost:8081/api/domain/updateDomain/${id}`,
+        `${process.env.REACT_APP_API_PATH}domain/updateDomain/${id}`,
         Domain
       );
       navigate("/domains");
     } else {
-      await axios.post("http://localhost:8081/api/domain/saveDomain", Domain);
+      await axios.post(
+        `${process.env.REACT_APP_API_PATH}domain/saveDomain`,
+        Domain
+      );
       navigate("/domains");
     }
 

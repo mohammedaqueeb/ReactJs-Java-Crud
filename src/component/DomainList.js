@@ -30,7 +30,7 @@ export default function DomainList() {
 
   const DomainList = async () => {
     const result = await axios.get(
-      "http://localhost:8081/api/domain/getAllDomain"
+      `${process.env.REACT_APP_API_PATH}domain/getAllDomain`
     );
     setDomain(result.data);
   };
@@ -54,14 +54,16 @@ export default function DomainList() {
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8081/api/domain/deleteDomain/${id}`);
+    await axios.delete(
+      `${process.env.REACT_APP_API_PATH}domain/deleteDomain/${id}`
+    );
     DomainList();
     // var shouldDelete = window.confirm(
     //   "Do you really want to delete this domain?"
     // );
     // if (shouldDelete) {
     //   await axios.delete(
-    //     `http://localhost:8081/api/CtcVersion/delete?versionId=${id}`
+    //     `${process.env.REACT_APP_API_PATH}CtcVersion/delete?versionId=${id}`
     //   );
     //   DomainList();
     // }

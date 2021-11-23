@@ -29,7 +29,9 @@ export default function ProductVersionList() {
   }, []);
 
   const VersionList = async () => {
-    const result = await axios.get("http://localhost:8081/api/CtcVersion/list");
+    const result = await axios.get(
+      `${process.env.REACT_APP_API_PATH}CtcVersion/list`
+    );
     setVersion(result.data);
   };
 
@@ -53,7 +55,7 @@ export default function ProductVersionList() {
 
   const deleteVersion = async (id) => {
     await axios.delete(
-      `http://localhost:8081/api/CtcVersion/delete?versionId=${id}`
+      `${process.env.REACT_APP_API_PATH}CtcVersion/delete?versionId=${id}`
     );
     VersionList();
   };
