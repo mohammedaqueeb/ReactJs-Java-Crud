@@ -84,10 +84,6 @@ export default function DomainList() {
           </Button>{" "}
         </h3>
 
-        <IconButton onClick={() => SweetAlert()} aria-label="delete">
-          <DeleteIcon />
-        </IconButton>
-
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="a dense  table">
             <TableHead>
