@@ -59,20 +59,28 @@ export default function ProductVersionManage() {
         Version
       );
       navigate("/product-version");
+      toast.success("Product Version Updated!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       await axios.post(`${process.env.REACT_APP_API_PATH}CtcVersion`, Version);
       navigate("/product-version");
+      toast.success("Product Version Saved!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
-
-    toast.success("Product Version Saved!", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
   };
 
   const {
@@ -209,6 +217,7 @@ export default function ProductVersionManage() {
             <Grid item xs={6}>
               <TextField
                 fullWidth
+                type="number"
                 id="estimateCost"
                 name="estimateCost"
                 label="estimate Cost"

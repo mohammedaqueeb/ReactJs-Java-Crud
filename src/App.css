@@ -83,3 +83,30 @@ table td {
 .swal2-styled.swal2-default-outline:focus {
   box-shadow: 0 0 0 3px rgb(100 150 200 / 0%) !important;
 }
+
+.css-1ha5wk2-MuiSvgIcon-root,
+.css-kp9ftd-MuiIcon-root {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  color: #3f51b5;
+  text-align: center;
+}
+
+.card-title {
+  margin: 0 !important;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.card-count {
+  margin: 0 !important;
+  color: #3f51b5;
+  font-weight: 400;
+  font-size: 35px;
+  padding-top: 6px;
+  letter-spacing: 1px;
+}
+
+.icons {
+  width: 100%;
+}

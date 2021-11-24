@@ -55,23 +55,31 @@ export default function DomainManage() {
         Domain
       );
       navigate("/domains");
+      toast.success("Domain Updated!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } else {
       await axios.post(
         `${process.env.REACT_APP_API_PATH}domain/saveDomain`,
         Domain
       );
       navigate("/domains");
+      toast.success("Domain Saved!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
-
-    toast.success("Domain Saved!", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
   };
 
   const {
