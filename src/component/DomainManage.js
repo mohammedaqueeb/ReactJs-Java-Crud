@@ -27,7 +27,7 @@ export default function DomainManage() {
   const [Domain, setDomain] = useState({
     id: "",
     domainName: "",
-    Type: "",
+    type: "",
     domainChair: "",
     localTPM: "",
     product: "",
@@ -74,7 +74,15 @@ export default function DomainManage() {
     });
   };
 
-  const { domainName, type, localTPM, product, domainClass, request } = Domain;
+  const {
+    domainName,
+    domainChair,
+    type,
+    localTPM,
+    product,
+    domainClass,
+    request,
+  } = Domain;
 
   return (
     <Container maxWidth="lg">
@@ -134,6 +142,7 @@ export default function DomainManage() {
             <Grid item xs={6}>
               <TextField
                 fullWidth
+                type="number"
                 id="product"
                 name="product"
                 label="Product"
@@ -156,10 +165,22 @@ export default function DomainManage() {
             <Grid item xs={6}>
               <TextField
                 fullWidth
+                type="number"
                 id="request"
                 name="request"
                 label="Request"
                 value={request}
+                onChange={(e) => onInputChange(e)}
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                fullWidth
+                id="domainChair"
+                name="domainChair"
+                label="domainChair"
+                value={domainChair}
                 onChange={(e) => onInputChange(e)}
                 variant="outlined"
               />
